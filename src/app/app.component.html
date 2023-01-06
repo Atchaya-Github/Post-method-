@@ -1,0 +1,20 @@
+
+<div class="container-sm mx-auto">
+<h1>{{name | uppercase}}</h1>
+<form [formGroup]="dummy" (ngSubmit)="submit()">
+    <div>
+         <label style="font-weight: bolder;">
+            Name:
+            <input formControlName="name" placeholder="Nameee">
+         </label><br>
+         <label style="font-weight: bolder;">
+            Mobid:
+            <input formControlName="mobid" placeholder="Mobid">
+        </label><br>
+         <button style="background-color: rgb(248, 169, 242);"type="submit">Sumbit</button>
+    </div>
+</form>
+
+<h4>Form Status: {{dummy.status}}</h4>
+</div>
+<router-outlet></router-outlet>
